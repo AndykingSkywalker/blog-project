@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+        <title>My Portfoio</title>
+        <link href="../style.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+     </head>   
+       <body>
+          <nav>
+            <h1 id="logo">Andrew King</h1>
+            <ul class="navigation-options">
+               <li class="navigation-option">
+                 <a id="nav-hover" href ="./index.html">Home</a>
+               </li>
+               <li class="navigation-option">
+                <a id="nav-hover" href="./blog.html">Blog</a>
+               </li>
+               <li class="navigation-option">
+                <a id="nav-hover" href="./media.html">Media</a>
+               </li>
+               <li class="navigation-option">
+                <a id="nav-hover" href="./contact.html">Contact</a>
+               </li>
+            </ul>
+          </nav>
+            <main>
+                <section id="about-me">
+                    <div class="about-me-container">
+                        <div class="about-me-text-container">
+                          <h2>About Me</h2>
+                          <p>
+                            Hi I'm Andrew! I'm a developer in training currently 
+                            learning the Full-Stack Engineer course through <a id="codecademy-hover" href="https://www.codecademy.com/" target="_blank">Codecademy</a> 
+                            and as you can clearly see I'm doing quite well.
+                          </p>
+                          <p>
+                            I started this blog to keep track of all the games I'm currently playing, think of it like IGN but far more biased.
+                            Hopefully you read my thoughts on games I'm currently playing and you feel inspired to pick them up yourself and give them a good go!
+                          </p>
+                        </div>
+                        <img
+                          src="https://i.imgur.com/kXpVFvK.jpg"
+                          alt="A photo of Me"
+                          class="portrait"
+                        />
+                      </div>
+                </section>
+                    <section id="fav-games">
+                          <div class="fav-games-container">
+                              <h2>My Favourite Games</h2>
+                                <ul>
+                                  <li>Fallout New Vegas</li>
+                                  <li>Grand Theft Auto Vice City</li>
+                                  <li>The Elder Scrolls IV: Oblivion</li>
+                                  <li>Tony Hawk's Pro Skater 4</li>
+                                  <li>Resident Evil 4</li>
+                                  <li>The Legend of Zelda: The Minish Cap</li>
+                                </ul>
+                                  <!-- Container for the image gallery -->
+                                        <div class="container">
+
+                                          <!-- Full-width images with number text -->
+                                          <div class="mySlides">
+                                            <div class="numbertext">1 / 6</div>
+                                              <img src="../resources/images/new-vegas.jpg" style="width:100%">
+                                          </div>
+
+                                          <div class="mySlides">
+                                            <div class="numbertext">2 / 6</div>
+                                              <img src="../resources/images/gtavc.jpg" style="width:100%">
+                                          </div>
+
+                                          <div class="mySlides">
+                                            <div class="numbertext">3 / 6</div>
+                                              <img src="../resources/images/oblivion.jpg" style="width:100%">
+                                          </div>
+
+                                          <div class="mySlides">
+                                            <div class="numbertext">4 / 6</div>
+                                              <img src="../resources/images/tony-hawks-pro-skater-4-2002.jpeg" style="width:100%">
+                                          </div>
+
+                                          <div class="mySlides">
+                                            <div class="numbertext">5 / 6</div>
+                                              <img src="../resources/images/RE4-HD-Screenshot-05.jpg" style="width:100%">
+                                          </div>
+
+                                          <div class="mySlides">
+                                            <div class="numbertext">6 / 6</div>
+                                              <img src="../resources/images/zelda.png" style="width:100%">
+                                          </div>
+
+                                          <!-- Next and previous buttons -->
+                                          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                                          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                                          <!-- Image text -->
+                                          <div class="caption-container">
+                                            <p id="caption"></p>
+                                          </div>
+
+                                          <!-- Thumbnail images -->
+                                          <div class="row">
+                                            <div class="column">
+                                              <img class="demo cursor" src="../resources/images/new-vegas.jpg" style="width:100%" onclick="currentSlide(1)" alt="Fallout New Vegas">
+                                            </div>
+                                            <div class="column">
+                                              <img class="demo cursor" src="../resources/images/gtavc.jpg" style="width:100%" onclick="currentSlide(2)" alt="Grand Theft Auto Vice City">
+                                            </div>
+                                            <div class="column">
+                                              <img class="demo cursor" src="../resources/images/oblivion.jpg" style="width:100%" onclick="currentSlide(3)" alt="The Elder Scrolls IV: Oblivion">
+                                            </div>
+                                            <div class="column">
+                                              <img class="demo cursor" src="../resources/images/tony-hawks-pro-skater-4-2002.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Tony Hawk's Pro Skater 4">
+                                            </div>
+                                            <div class="column">
+                                              <img class="demo cursor" src="../resources/images/RE4-HD-Screenshot-05.jpg" style="width:100%" onclick="currentSlide(5)" alt="Resident Evil 4">
+                                            </div>
+                                            <div class="column">
+                                              <img class="demo cursor" src="../resources/images/zelda.png" style="width:100%" onclick="currentSlide(6)" alt="The Legend of Zelda: The Minish Cap">
+                                            </div>
+                                          </div>
+                                        </div>
+
+                                  </div>
+                          </div>
+                    </section>
+                </main>
+            
+                <footer> Made by Andrew King
+                  <p>
+                    Fun fact! I've been programing for
+                    <span id="time-container">0</span> seconds!
+                  </p>
+
+                </footer>
+              </body>
+                          <script>
+                            const timeContainer = document.getElementById("time-container");
+                            const BIRTH_DAY = "12-10-1815";
+                            const BIRTH_DAY_DATE = new Date(BIRTH_DAY);
+                            const intlNumberFormatter = new Intl.NumberFormat("en-US");
+                        
+                            setInterval(() => {
+                              const now = new Date();
+                              const difference = Math.floor(
+                                (now.getTime() - BIRTH_DAY_DATE.getTime()) / 1000
+                              );
+                        
+                              timeContainer.innerText = intlNumberFormatter.format(difference);
+                            }, 1000);
+                          </script>
+                                <script>
+
+                                          var slideIndex = 1;
+                                          showSlides(slideIndex);
+
+                                          // Next/previous controls
+                                          function plusSlides(n) {
+                                            showSlides(slideIndex += n);
+                                          }
+
+                                          // Thumbnail image controls
+                                          function currentSlide(n) {
+                                            showSlides(slideIndex = n);
+                                          }
+
+                                          function showSlides(n) {
+                                            var i;
+                                            var slides = document.getElementsByClassName("mySlides");
+                                            var dots = document.getElementsByClassName("demo");
+                                            var captionText = document.getElementById("caption");
+                                            if (n > slides.length) {slideIndex = 1}
+                                            if (n < 1) {slideIndex = slides.length}
+                                            for (i = 0; i < slides.length; i++) {
+                                              slides[i].style.display = "none";
+                                            }
+                                            for (i = 0; i < dots.length; i++) {
+                                              dots[i].className = dots[i].className.replace(" active", "");
+                                            }
+                                            slides[slideIndex-1].style.display = "block";
+                                            dots[slideIndex-1].className += " active";
+                                            captionText.innerHTML = dots[slideIndex-1].alt;
+                                          }
+
+                                                              </script>
+      </html>
+            

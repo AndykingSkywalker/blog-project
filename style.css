@@ -24,6 +24,7 @@ h2 {
   font-family: Roboto, sans-serif;
   margin: 0;
   margin-bottom: var(--spacing-2);
+  color: darkred;
 }
 
 body {
@@ -248,10 +249,12 @@ a {
 #game-heading {
   background-color: darkred;
   color: white;
+  padding: 10px;
 }
 
 #game-text {
   background-color: grey;
   color: white;
   padding: 10px;
+  font-weight: 400;
 }
